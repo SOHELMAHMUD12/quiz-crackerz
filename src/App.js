@@ -5,6 +5,7 @@ import Main from './Components/Layout/Main';
 import Statistics from './Components/Statistics/Statistics';
 import Blog from './Components/Blogs/Blog';
 import About from './Components/Abouts/About';
+import Quiz from './Components/Quiz/Quiz';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       children:[
         {
           path:'/home',
+          loader:()=> fetch('https://openapi.programming-hero.com/api/quiz'),
           element:<Home></Home>
         },
         {
@@ -30,7 +32,12 @@ function App() {
         {
           path: 'about',
           element: <About/>
-        }
+        },
+        {path: "subject/:subjectID", element: <Quiz/>, loader: async ({ params }) => {
+          return fetch(
+            `https://openapi.programming-hero.com/api/quiz/${params.subjectID}`
+          );
+        },}
         
 
       ]
@@ -39,7 +46,7 @@ function App() {
 
   ])
   return (
-    <div className="App">
+    <div>
       <RouterProvider router ={router}></RouterProvider>
       
     </div>
