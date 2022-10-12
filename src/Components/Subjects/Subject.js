@@ -20,7 +20,7 @@ const Subject = ({subject}) => {
         {name}
         </h2>
       </div>
-      <p className="dark:text-gray-100">
+      <p className="dark:text-gray-100 mb-5">
         Total Quiz: {total}
       </p>
       <button className="bg-blue-600 py-2 px-4 rounded-lg w-full">Quiz Start</button>

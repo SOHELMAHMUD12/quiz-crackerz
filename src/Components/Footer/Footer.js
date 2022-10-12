@@ -9,7 +9,6 @@ const Footer = () => {
 			<li>Home</li>
 			<li>About</li>
 			<li>Blog</li>
-			<li>Pricing</li>
 			<li>Contact</li>
 		</ul>
 		<div className="flex flex-col justify-center pt-6 lg:pt-0">
