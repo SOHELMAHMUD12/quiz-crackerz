@@ -21,7 +21,8 @@ const Question = ({ questios }) => {
             key={index}
           ></Quizoption>
 
-        ))} <button 
+        ))} 
+        <button 
         onClick={handleCorrectAns}
         className="mx-auto bg-white text-blue-800 py-4 px-20 rounded-xl text-2xl font-bold">Ans</button>
         </div>
